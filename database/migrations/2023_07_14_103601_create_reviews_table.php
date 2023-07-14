@@ -13,18 +13,19 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('farmer_id')->unsigned();
-            $table->string('product_name');
-            $table->string('product_description');
-            $table->integer('quantity');
+            $table->bigInteger('customer_id')->unsigned();
+            $table->string('review_title');
+            $table->string('review_description', 5500);
             $table->timestamps();
 
             $table->foreign("farmer_id")->references("id")->on("users");
+            $table->foreign("customer_id")->references("id")->on("users");
         });
 
-        DB::update("ALTER TABLE products AUTO_INCREMENT=101; ");
+        DB::update("ALTER TABLE reviews AUTO_INCREMENT=101; ");
     }
 
     /**
@@ -34,6 +35,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('reviews');
     }
 };

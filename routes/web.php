@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Routing;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [Routing::class, 'showIndex']);
+
+Route::middleware(['disable_back'])->group(function () {
+
+    Route::prefix('auth')->group(function () {
+        Route::get('login', [Routing::class, 'accounts'])->name('login');
+        Route::get('registration', [Routing::class, 'accounts'])->name('registration');
+        Route::get('reset', [Routing::class, 'accounts'])->name('reset');
+    });
 });

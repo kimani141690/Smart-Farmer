@@ -18,6 +18,12 @@ class CustomerFactory extends Factory
     {
         return [
             //
+            'first_name' => fake()->firstName(),
+            'last_name' => fake()->lastName(),
+            'email' => fake()->safeEmail(),
+            'phone_number' => fake()->phoneNumber(),
+            'location' => fake()->locale(),
+            'address' => fake()->address(),
         ];
     }
 }
