@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Routing;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,6 @@ Route::middleware(['disable_back'])->group(function () {
         Route::get('registration', [Routing::class, 'accounts'])->name('registration');
         Route::get('reset', [Routing::class, 'accounts'])->name('reset');
     });
+
+    Route::post('registration', [AuthController::class, 'registration']);
 });
