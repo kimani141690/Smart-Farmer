@@ -10,64 +10,79 @@
     <br><br> <br><br>
     <div class="fullfarmerprofilecontainer">
 <div class="farmerprofilecontainer">
-    <h2>View Profile</h2>
-    <p><strong>Username:</strong> JohnDoe</p>
-    <p><strong>Email:</strong> johndoe@example.com</p>
-    <p><strong>Location:</strong> New York</p>
-    <p><strong>Address:</strong> 123 Main St</p>
-    <p><strong>Contact:</strong> 123-456-7890</p>
+
+    <div style="align-content: center">
+        <img width="80px" height="80px" src="{{ asset('storage/profiles/' . $farmer->profile_pic) }}" alt="Profile Picture">
+
+    </div>
+
+    <p><strong>Username:</strong> {{ $user->username }}</p>
+    <p><strong>Email:</strong> {{ $user->email }}</p>
+    <p><strong>Location:</strong> {{ $farmer->location }}</p>
+    <p><strong>Address:</strong> {{ $farmer->address }}</p>
+    <p><strong>Contact:</strong> {{ $farmer->phone_number }}</p>
     <p><strong>Profile:</strong></p>
-    <textarea readonly maxlength="30">I am a web developer.</textarea>
+    <textarea readonly maxlength="30">{{ $farmer->profile }}</textarea>
     <button id="updateBtn">Update</button>
-</div>
 
 <div class="farmerprofilemodal" id="updateModal">
     <div class="modal-content">
         <h3>Update Profile</h3>
         <form id="updateForm">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="location" placeholder="Location" required>
-            <input type="text" name="address" placeholder="Address" required>
-            <input type="text" name="contact" placeholder="Contact" required>
-            <input type="file" name="profile" placeholder="Profile Pic" required contenteditable="true">
-            <textarea name="profile" placeholder="Profile" maxlength="30" required contenteditable="true"></textarea>
+
+            @method('PUT')
+            <input type="text" name="username" placeholder="Username" required value="{{ $user->username }}">
+            <input type="email" name="email" placeholder="Email "  contenteditable="true" required value="{{ $user->email }}">
+            <input type="text" name="location" placeholder="Location"  contenteditable="true" required value="{{ $farmer->location }}">
+            <input type="text" name="address" placeholder="Address"  contenteditable="true" required value="{{ $farmer->address }}">
+            <input type="text" name="contact" placeholder="Contact"  contenteditable="true" required value="{{ $farmer->phone_number }}">
+            <textarea name="profile" placeholder="Profile" maxlength="30"  contenteditable="true" required>{{ $farmer->profile }}</textarea>
             <button type="submit">Save</button>
+
         </form>
     </div>
 </div>
 </div>
 
-<script>
-    const updateBtn = document.getElementById('updateBtn');
-    const updateModal = document.getElementById('updateModal');
-    const updateForm = document.getElementById('updateForm');
-    const profileTextarea = document.querySelector('.container textarea');
+    <!-- Success Message Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h4>Profile Update Successful</h4>
+            <p>Your profile has been updated.</p>
+        </div>
+    </div>
 
-    updateBtn.addEventListener('click', openUpdateModal);
-    updateForm.addEventListener('submit', handleFormSubmit);
 
-    function openUpdateModal() {
-        updateModal.style.display = 'block';
+    <script>
+        const updateBtn = document.getElementById('updateBtn');
+        const updateModal = document.getElementById('updateModal');
+        const updateForm = document.getElementById('updateForm');
+        const profileTextarea = document.querySelector('.farmerprofilecontainer textarea');
+        const successModal = document.getElementById('successModal');
 
-        const profileText = profileTextarea.value;
-        const modalTextarea = document.querySelector('.modal textarea');
-        modalTextarea.value = profileText;
-    }
+        updateBtn.addEventListener('click', openUpdateModal);
 
-    function handleFormSubmit(event) {
-        event.preventDefault();
+        // Check if the success message exists in the session
+        @if(session('success'))
+        // Show the success modal
+        successModal.style.display = 'block';
+        @endif
 
-        // Perform your form submission logic here
-        // You can access the updated profile values using `event.target`
-        // Example:
-        const formData = new FormData(event.target);
-        const updatedProfile = Object.fromEntries(formData.entries());
-        console.log(updatedProfile);
+        function openUpdateModal() {
+            updateModal.style.display = 'block';
 
-        // Close the modal after form submission
-        updateModal.style.display = 'none';
-    }
-</script>
+            const profileText = profileTextarea.value;
+            const modalTextarea = document.querySelector('.modal textarea');
+            modalTextarea.value = profileText;
+        }
+
+        // Close the success modal after 3 seconds
+        setTimeout(function() {
+            successModal.style.display = 'none';
+        }, 3000);
+    </script>
+
 </body>
-</html>
+
+
+

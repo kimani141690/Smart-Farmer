@@ -76,6 +76,7 @@ font-size: 14px;
 }
 
 .modal {
+    display: none;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
