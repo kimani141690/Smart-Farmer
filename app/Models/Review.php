@@ -20,4 +20,14 @@ class Review extends Model
     {
         return $this->belongsTo(Customer::class);
     }
+
+//    public function customer()
+//    {
+//        return $this->belongsTo(User::class, 'customer_id');
+//    }
+//
+//    public function farmer()
+//    {
+//        return $this->belongsTo(User::class, 'farmer_id');
+//    }
 }
