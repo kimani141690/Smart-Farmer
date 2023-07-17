@@ -1,0 +1,280 @@
+body {
+    font-family: 'Poppins';
+}
+
+.cartcontainer {
+    margin-left: 17%;
+    width: 82%;
+    border-radius: 20px;
+    padding: 10px 20px;
+   background-color:white;
+
+}
+
+.cartcontainer h2 {
+
+    text-align: center;
+}
+
+.cart-item {
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.cart-item div {
+    margin-left: 30px;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.checkoutcontainer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 640px;
+    border-radius: 20px;
+}
+.coutcont input{
+    width: 300px;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 0px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.coutbutton-container button{
+    border: 0px;
+font-family: 'Poppins';
+background-color: black;
+color: white;
+border-radius: 7px;
+font-size: 14px;
+}
+
+.coutbutton-container button:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+}
+
+#payButton {
+    border: 0px;
+font-family: 'Poppins';
+background-color: rgb(0, 255, 136);
+color: rgb(0, 0, 0);
+border-radius: 7px;
+font-size: 14px;
+}
+#payButton:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 255, 136);
+}
+
+.modal {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 255, 136);
+    width: 360px;
+    border-radius: 20px;
+}
+
+.farmersmarketcontainer {
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*text-align: center;*/
+    /*background-color: rgb(0, 255, 136);*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    margin-left: 17%;
+    width: 82%;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.farmersmarketcontainer h2 {
+    color: black;
+}
+.farmer-container {
+    margin-top: 20px;
+    text-align: center;
+    /*background-color: rgb(0, 0, 0);*/
+    width: 100%;
+    border-radius: 20px;}
+
+.farmer-card {
+    padding: 40px;
+    background-color: black;
+    width: 20%;
+    /*height: 100px;*/
+    border-radius: 20px;
+}
+.farmer-card div {
+    color: white;
+    font-size: 14pt;
+    font-weight: 500;
+}
+
+.orderhistorycontainer {
+    margin-left: 17%;
+    width: 82%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color:white;
+
+}
+.order-table {
+
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    border-radius: 20px;
+    padding: 6px;
+}
+.order-table thead {
+color: white;
+}
+
+.order-table tbody {
+    background-color: rgb(0, 255, 136);
+}
+.search-bar #searchInput {
+    width: 70%;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 2px solid black;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.order-summarycontainer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 640px;
+    border-radius: 20px;
+}
+.order-summary {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 400px;
+    border-radius: 20px;
+    color: rgb(0, 255, 136);
+}
+.viewprofilecontainer {
+
+    text-align: center;
+    margin-left: 40%;
+    width: 40%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgb(0, 255, 136);
+    font-size: 16px;
+}
+.viewprofilecontainer button {
+    border: 0px;
+    font-family: 'Poppins';
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+}
+.viewprofilecontainer button:hover {
+    background-color: white;
+    color: black;
+}
+
+.updateprofilemodal {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 640px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.updateprofilemodal input {
+    width: 300px;
+height: 30px;
+border-radius: 12px;
+margin: 12px;
+border: 0px;
+font-size: 14px;
+text-align: center;
+}
+.updateprofilemodal button {
+    border: 0px;
+    font-family: 'Poppins';
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+}
+.updateprofilemodal button:hover {
+    background-color: white;
+    color: black;
+}
+
+.profilepage {
+    display: flex;
+}
+
+#profilepagetitle {
+    color: white;
+    text-align: center;
+}
+
+.allproductscontainer {
+    margin-left: 17%;
+    width: 82%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+}
+.product-container {
+   width: 100%;
+    text-align: center;
+    background-color:white;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.oneproduct-card {
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 250px;
+    height:210px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.oneproduct-card img {
+    height: 150px;
+}
+.oneproduct-card button {
+    border: 0px;
+    font-family: 'Poppins';
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+}
+.oneproduct-card button:hover {
+    background-color: white;
+    color: black;
+}
+
+

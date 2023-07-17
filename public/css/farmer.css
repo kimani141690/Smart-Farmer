@@ -1,0 +1,349 @@
+body {
+    font-family: 'Poppins';
+
+}
+
+#confirmedorderstitle {
+    color: white;
+    text-align: center;
+}
+.searchbarbyorder {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.searchbarbyorder input {
+    width: 300px;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 0px;
+    font-size: 14px;
+    text-align: center;
+
+}
+#searchbarbyordersubmit {
+    width: 90px;
+    background-color: rgb(0, 255, 136);
+    color: black;
+}
+
+#searchbarbyordersubmit:hover {
+    width: 90px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.confirmedordercontainer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 940px;
+    border-radius: 20px;
+}
+.confirmedordercontainer table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 740px;
+    border-radius: 20px;
+    padding: 6px;
+}
+.confirmedordercontainer thead {
+color: white;
+}
+
+.confirmedordercontainer tbody {
+    background-color: rgb(0, 255, 136);
+    border-radius: 20px;
+}
+
+.reportscontainer {
+    margin-left: 17%;
+    width: 82%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 13px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set the number of columns to 3 */
+    grid-gap: 10px;
+
+}
+.report-container{
+    display: flex;
+    flex-direction:row;
+    padding:10px ;
+    justify-content: space-evenly;
+}
+
+.report-card {
+
+    text-align: center;
+    background-color:black;
+    width: 30%;
+    border-radius: 5px;
+    color:white;
+   padding: 40px;
+
+
+}
+
+#viewordertitle {
+    color: rgb(0, 255, 136);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    text-decoration: underline solid black;
+}
+
+.vieworderscontainerfarmer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 640px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.farmerprofilecontainer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 640px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.farmerprofilemodal {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 640px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.fullfarmerprofilecontainer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.fullfarmerprofilecontainer button {
+    border: 0px;
+    font-family: 'Poppins';
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+}
+.fullfarmerprofilecontainer button:hover {
+    background-color: white;
+    color: black;
+}
+
+.farmerprofilemodal input {
+    width: 300px;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 0px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#farmer_view_order_title {
+    color: black;
+    text-decoration: underline solid black;
+}
+.farmer_view_order_title_searchbar input {
+    width: 400px;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    font-size: 14px;
+    text-align: center;
+    border: solid black 2px;
+}
+#farmer_view_order_title_searchbar_button {
+    width: 90px;
+    border: 0px;
+    font-family: 'Poppins';
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+}
+#farmer_view_order_title_searchbar_button:hover {
+    background-color: white;
+    color: black;
+}
+.farmervieworderstable {
+    margin-left: 17%;
+    width:82%;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    border-radius: 20px;
+    font-size: 14px;
+}
+.farmervieworderstable table {
+   width:100%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.farmervieworderstable thead {
+    color: white;
+}
+.farmervieworderstable tbody {
+    background-color: rgb(0, 255, 136);
+    border-radius: 20px;
+}
+.farmer_view_order_title_searchbar {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.prodsearch-bar input{
+    width: 300px;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 0px;
+    font-size: 14px;
+    text-align: center;
+}
+.prodmancontainer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 840px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.prodmancontainer table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 740px;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 6px;
+}
+.prodmancontainer thead {
+    color: white;
+}
+.prodmancontainer tbody {
+    background-color: rgb(0, 255, 136);
+    border-radius: 20px;
+}
+
+.prodmancontainer button {
+    width: 130px;
+    border: 0px;
+    font-family: 'Poppins';
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+}
+.prodmancontainer button:hover {
+    background-color: white;
+    color: black;
+}
+
+.addnewproductmodal {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 840px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.addnewproductmodal input {
+    width: 300px;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 0px;
+    font-size: 14px;
+    text-align: center;
+}
+.updateproductmodal {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 840px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.updateproductmodal input {
+    width: 300px;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 0px;
+    font-size: 14px;
+    text-align: center;
+}
+.deleteproductmodal {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(0, 255, 136);
+    width: 840px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.addnewproductmodal button {
+    width: 130px;
+    border: 0px;
+    font-family: 'Poppins';
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+}
+.addnewproductmodal button:hover {
+    background-color: white;
+    color: black;
+}
+.updateproductmodal button {
+    width: 130px;
+    border: 0px;
+    font-family: 'Poppins';
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+}
+.updateproductmodal button:hover {
+    background-color: white;
+    color: black;
+}
+.deleteproductmodal button {
+    width: 130px;
+    border: 0px;
+    font-family: 'Poppins';
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+}
+.deleteproductmodal button:hover {
+    background-color: white;
+    color: black;
+}
