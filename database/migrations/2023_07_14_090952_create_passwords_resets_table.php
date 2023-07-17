@@ -15,10 +15,13 @@ return new class extends Migration
     {
         Schema::create('password_resets', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->primary();
+            $table->bigInteger('user_id')->unsigned();
             $table->string('token');
             $table->enum('token_used', ['true', 'false'])->default('false');
             $table->timestamps();
+
+            //relationships
+            $table->foreign("user_id")->references("id")->on("users");
         });
     }
 

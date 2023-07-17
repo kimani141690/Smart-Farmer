@@ -8,14 +8,13 @@
 <body>
 @include('farmer.sidebar')
 
-<h2 style="color: black; margin-left: 18%" >Reports</h2>
+<h2 style="color: black; margin-left: 18%">Reports</h2>
 
 
-<div class="reportscontainer"  >
+<div class="reportscontainer">
 
 
-
-    <div class="report-container" >
+    <div class="report-container">
         <div class="report-card">
             <label> Orders Today</label>
             <h1>3 </h1>

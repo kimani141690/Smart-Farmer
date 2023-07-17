@@ -18,9 +18,11 @@ class RegistrationMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data, $type)
     {
         //
+        $this->data = $data;
+        $this->type = $type;
     }
 
     /**

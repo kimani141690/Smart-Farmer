@@ -21,6 +21,14 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'farmer_id',
+        'customer_id',
+        'role',
+        'email_verified_at',
+        'last_login',
+        'account_status',
+        'google_id',
+        'google_token',
     ];
 
     /**

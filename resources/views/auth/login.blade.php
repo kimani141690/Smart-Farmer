@@ -4,23 +4,21 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
 </head>
 <body>
 
-<br><br><br><br><br><br>
 <div class="logincontainer">
-<br>
+    <br>
 
     <h1>Login</h1>
 
-    <form id="loginForm">
+    <form id="loginForm" method="POST">
         @csrf
         <div class="input-group">
-            <input type="email" placeholder="Email" required>
+            <input type="email" name="email" placeholder="Email" required>
         </div>
         <div class="input-group">
-            <input type="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" required minlength="8">
         </div>
         <br>
         <div class="input-group">
@@ -31,68 +29,48 @@
     <div class="input-group" id="signpass">
 
         <a href="/auth/reset">Forgot password?</a>
-</div>
+    </div>
 
     <br>
     <div class="input-group" id="signpass">
 
-        <a href="#">Sign in with Google</a>
+        <a href="/auth/google/">Sign in with Google</a>
     </div>
     <br>
     <div class="input-group" id="signpass">
-
-
-        <button id="myModal" onclick="openModal()">Don't have an account?</button>
+        <button id="myModal" onclick="openModal()" style="cursor: pointer;">Don't have an account?</button>
     </div>
-
-
 
 
     <!-- Modal -->
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Choose your user type:</h2>
-        <button onclick="registerAsFarmer()">Farmer</button>
-        <button onclick="registerAsCustomer()">Customer</button>
+    <div id="chooseUserType" class="modal">
+        <div class="modal-content" style="margin: 20px auto;">
+            <span class="close" onclick="closeModal()" style="cursor: pointer">&times;</span>
+            <h2>Choose your user type:</h2>
+            <button onclick="registerAsFarmer()">Farmer</button>
+            <button onclick="registerAsCustomer()">Customer</button>
+        </div>
     </div>
-</div>
 
-<script>
-    // JavaScript functions for the modal
-    function openModal() {
-        document.getElementById('myModal').style.display = 'block';
-    }
+    <script>
+        // JavaScript functions for the modal
+        function openModal() {
+            document.getElementById('chooseUserType').style.display = 'block';
+        }
 
-    function closeModal() {
-        document.getElementById('myModal').style.display = 'none';
-    }
+        function closeModal() {
+            document.getElementById('chooseUserType').style.display = 'none';
+        }
 
-    // JavaScript functions for user registration
-    function registerAsFarmer() {
-        // TODO: Handle farmer registration logic
-        console.log('Register as a farmer');
-    }
+        // JavaScript functions for user registration
+        function registerAsFarmer() {
+            window.location.href = 'http://127.0.0.1:8000/auth/farmer';
+        }
 
-    function registerAsCustomer() {
-        // TODO: Handle customer registration logic
-        console.log('Register as a customer');
-    }
-
-    // JavaScript function for Google sign-in
-    function loginWithGoogle() {
-        // TODO: Handle Google sign-in logic
-        console.log('Sign in with Google');
-    }
-
-    // JavaScript function for form submission
-    document.getElementById('loginForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-        // TODO: Handle login form submission logic
-        console.log('Form submitted');
-    });
-</script>
-<br><br>
+        function registerAsCustomer() {
+            window.location.href = 'http://127.0.0.1:8000/auth/customer';
+        }
+    </script>
 </div>
 </body>
 </html>

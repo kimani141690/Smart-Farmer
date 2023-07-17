@@ -7,7 +7,7 @@ body {
     width: 82%;
     border-radius: 20px;
     padding: 10px 20px;
-   background-color:white;
+    background-color: white;
 
 }
 
@@ -38,7 +38,8 @@ body {
     width: 640px;
     border-radius: 20px;
 }
-.coutcont input{
+
+.coutcont input {
     width: 300px;
     height: 30px;
     border-radius: 12px;
@@ -48,28 +49,29 @@ body {
     text-align: center;
 }
 
-.coutbutton-container button{
-    border: 0px;
-font-family: 'Poppins';
-background-color: black;
-color: white;
-border-radius: 7px;
-font-size: 14px;
+.coutbutton-container button {
+    border: 0;
+    font-family: 'Poppins', serif;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
 }
 
-.coutbutton-container button:hover{
+.coutbutton-container button:hover {
     background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 #payButton {
-    border: 0px;
-font-family: 'Poppins';
-background-color: rgb(0, 255, 136);
-color: rgb(0, 0, 0);
-border-radius: 7px;
-font-size: 14px;
+    border: 0;
+    font-family: 'Poppins', serif;
+    background-color: rgb(0, 255, 136);
+    color: rgb(0, 0, 0);
+    border-radius: 7px;
+    font-size: 14px;
 }
+
 #payButton:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(0, 255, 136);
@@ -77,8 +79,7 @@ font-size: 14px;
 
 .modal {
     display: none;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
     text-align: center;
     background-color: rgb(0, 0, 0);
     color: rgb(0, 255, 136);
@@ -100,15 +101,18 @@ font-size: 14px;
     border-radius: 20px;
     padding: 10px 20px;
 }
+
 .farmersmarketcontainer h2 {
     color: black;
 }
+
 .farmer-container {
     margin-top: 20px;
     text-align: center;
     /*background-color: rgb(0, 0, 0);*/
     width: 100%;
-    border-radius: 20px;}
+    border-radius: 20px;
+}
 
 .farmer-card {
     padding: 40px;
@@ -117,6 +121,7 @@ font-size: 14px;
     /*height: 100px;*/
     border-radius: 20px;
 }
+
 .farmer-card div {
     color: white;
     font-size: 14pt;
@@ -129,9 +134,10 @@ font-size: 14px;
     border-radius: 20px;
     padding: 10px 20px;
     text-align: center;
-    background-color:white;
+    background-color: white;
 
 }
+
 .order-table {
 
     text-align: center;
@@ -140,13 +146,15 @@ font-size: 14px;
     border-radius: 20px;
     padding: 6px;
 }
+
 .order-table thead {
-color: white;
+    color: white;
 }
 
 .order-table tbody {
     background-color: rgb(0, 255, 136);
 }
+
 .search-bar #searchInput {
     width: 70%;
     height: 30px;
@@ -166,6 +174,7 @@ color: white;
     width: 640px;
     border-radius: 20px;
 }
+
 .order-summary {
     margin-left: auto;
     margin-right: auto;
@@ -175,6 +184,7 @@ color: white;
     border-radius: 20px;
     color: rgb(0, 255, 136);
 }
+
 .viewprofilecontainer {
 
     text-align: center;
@@ -185,6 +195,7 @@ color: white;
     background-color: rgb(0, 255, 136);
     font-size: 16px;
 }
+
 .viewprofilecontainer button {
     border: 0px;
     font-family: 'Poppins';
@@ -193,6 +204,7 @@ color: white;
     border-radius: 7px;
     font-size: 14px;
 }
+
 .viewprofilecontainer button:hover {
     background-color: white;
     color: black;
@@ -207,15 +219,17 @@ color: white;
     border-radius: 20px;
     font-size: 16px;
 }
+
 .updateprofilemodal input {
     width: 300px;
-height: 30px;
-border-radius: 12px;
-margin: 12px;
-border: 0px;
-font-size: 14px;
-text-align: center;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 0px;
+    font-size: 14px;
+    text-align: center;
 }
+
 .updateprofilemodal button {
     border: 0px;
     font-family: 'Poppins';
@@ -224,6 +238,7 @@ text-align: center;
     border-radius: 7px;
     font-size: 14px;
 }
+
 .updateprofilemodal button:hover {
     background-color: white;
     color: black;
@@ -246,25 +261,29 @@ text-align: center;
     text-align: center;
     font-size: 16px;
 }
+
 .product-container {
-   width: 100%;
+    width: 100%;
     text-align: center;
-    background-color:white;
+    background-color: white;
     border-radius: 20px;
     font-size: 16px;
 }
+
 .oneproduct-card {
     padding: 40px;
     text-align: center;
     background-color: rgb(0, 255, 136);
     width: 250px;
-    height:210px;
+    height: 210px;
     border-radius: 20px;
     font-size: 16px;
 }
+
 .oneproduct-card img {
     height: 150px;
 }
+
 .oneproduct-card button {
     border: 0px;
     font-family: 'Poppins';
@@ -273,6 +292,7 @@ text-align: center;
     border-radius: 7px;
     font-size: 14px;
 }
+
 .oneproduct-card button:hover {
     background-color: white;
     color: black;
