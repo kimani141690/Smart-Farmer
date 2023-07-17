@@ -22,13 +22,33 @@ class Routing extends Controller
             }
             return redirect("/")->withErrors(['error' => "You are already logged in"]);
 
-        } elseif (request()->is('auth/registration')) {
+        } elseif (request()->route()->named('farmer')) {
 
-            return view('auth.registration');
+            return view('auth.signup', [
+                'account_type' => 'Farmers',
+            ]);
 
-        } elseif (request()->is('auth/reset')) {
+        } elseif (request()->route()->named('customer')) {
 
-            return view('auth.reset_request');
+            return view('auth.signup', [
+                'account_type' => 'Customers',
+            ]);
+
+        } elseif (request()->route()->named('farmer_details')) {
+
+            return view('auth.user_details', [
+                'account_type' => 'Farmers',
+            ]);
+
+        }  elseif (request()->route()->named('customer_details')) {
+
+            return view('auth.user_details', [
+                'account_type' => 'Customers',
+            ]);
+
+        }  elseif (request()->is('auth/reset')) {
+
+            return view('auth.reset_password');
 
         } else {
             abort(404);

@@ -1,24 +1,25 @@
+@import "customer.css";
 .logincontainer {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto;
     text-align: center;
     background-color: rgb(0, 255, 136);
     width: 640px;
     border-radius: 20px;
 }
+
 body {
-    font-family: 'Poppins';
+    font-family: 'Poppins', serif;
     background-color: black;
 }
 
-.input-group input{
-width: 300px;
-height: 30px;
-border-radius: 12px;
-margin: 12px;
-border: 0px;
-font-size: 14px;
-text-align: center;
+.input-group input {
+    width: 300px;
+    height: 30px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 0px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .input-group a {
@@ -28,12 +29,12 @@ text-align: center;
 }
 
 .input-group button {
-border: 0px;
-font-family: 'Poppins';
-background-color: black;
-color: white;
-border-radius: 7px;
-font-size: 14px;
+    border: 0;
+    font-family: 'Poppins', serif;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
 
 }
 
@@ -43,18 +44,18 @@ font-size: 14px;
 }
 
 .modal button {
-    border: 0px;
-font-family: 'Poppins';
-background-color: black;
-color: white;
-border-radius: 7px;
-font-size: 14px;
+    border: 0;
+    font-family: 'Poppins', serif;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
 }
 
 
 #signpass {
     height: 28px;
-    width:30% ;
+    width: 30%;
     margin-left: 35%;
 }
 
@@ -85,12 +86,12 @@ font-size: 14px;
 
 #rstbutton {
     background-color: black;
-    color:white;
+    color: white;
 }
 
 #rstbutton:hover {
     background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 .signcontainer {
@@ -114,12 +115,12 @@ font-size: 14px;
 
 #sgnbutton {
     background-color: black;
-    color:white;
+    color: white;
 }
 
 #sgnbutton:hover {
     background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 .userdetailscontainer {
@@ -140,14 +141,15 @@ font-size: 14px;
     font-size: 14px;
     text-align: center;
 }
+
 #savedetailsbutton {
     background-color: black;
-    color:white;
+    color: white;
 }
 
 #savedetailsbutton:hover {
     background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 #userdesc {
