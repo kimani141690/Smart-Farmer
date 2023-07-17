@@ -25,23 +25,32 @@
         <br>
         <div style="display: flex">
         <div>
-            <img src="{{ asset('images/homepage.png') }} " style="height:100px;width: 100px; " alt="product image">
+            <img src="{{ asset('images/'.$item->product->image) }}" style="height:100px;width: 100px;" alt="product image">
         </div>
         <div class="cart-item">
 
-            <p>Product:name</p>
-            <p>Quantity:quantity</p>
-            <p>Price:price</p>
+            <p>Product: {{ $item->product->name }}</p>
+            <p>Quantity: {{ $item->quantity }}</p>
+            <p>Price: {{ $item->product->price }}</p>
 
         </div>
         </div>
 
-        <div> <button> Remove </button></div>
+        <div>
+            <button onclick="removeFromCart({{ $item->id }})">Remove</button>
+        </div>
 
     </div>
     <div class="checkout-button-container">
-        <button onclick="location.href='#'>Checkout</button>
+        <button onclick="location.href='{{ route('checkout') }}'">Checkout</button>
     </div>
 </div>
+<script>
+function removeFromCart(itemId) {
+// Perform the logic to remove the item from the cart
+// You can make an AJAX request to the server-side code to handle the cart functionality
+console.log("Item removed from cart:", itemId);
+}
+</script>
 </body>
 </html>
