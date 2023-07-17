@@ -18,15 +18,19 @@
     <div class="farmer-container">
         <!-- Loop through the farmers and render each farmer card -->
         <br><br>
+        @foreach($farmers as $farmer)
             <div class="farmer-card">
-                <img src="{{asset('images/homepage.png')}}" style=" width: 80px; height:80px " alt="farmer profile">
-                <div>Farmer:username</div>
-                <div>Farmer:contact</div>
-                <div>Farmer:description</div>
-
-
+                <img src="{{ asset('images/'.$farmer->profile_pic) }}" style="width: 80px; height:80px" alt="farmer profile">
+                <div>Farmer: {{ $farmer->username }}</div>
+                <div>Contact: {{ $farmer->contact }}</div>
+                <div>Description: {{ $farmer->description }}</div>
+                <a href="{{ route('products', ['farmer_id' => $farmer->id]) }}">View Products</a>
             </div>
-      <br>
+            <br>
+        @endforeach
+
+        <!-- Display pagination links -->
+        {{ $farmers->links() }}
     </div>
     <br>
 

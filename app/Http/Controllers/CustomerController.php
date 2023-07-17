@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Farmer;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -50,6 +51,22 @@ class CustomerController extends Controller
         // Redirect or return a response as needed
         return redirect()->back()->with('success', 'Profile updated successfully.');
     }
+
+
+    public function index()
+    {
+        $farmers = Farmer::paginate(10); // Retrieve all farmers with pagination (10 items per page)
+        return view('landing_page', ['farmers' => $farmers]);
+    }
+
+    public function shop_section($farmer_id)
+    {
+        $farmer = Farmer::findOrFail($farmer_id);
+        $products = $farmer->products; // Assuming you have a "products" relationship defined in the Farmer model
+
+        return view('products', ['farmer' => $farmer, 'products' => $products]);
+    }
+
 
 
 
